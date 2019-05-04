@@ -28,8 +28,17 @@ const Counter = () => {
   );
 }
 
+const App = () => {
+  return (
+    <div className="scoreboard">
+      <Header />,
+      <Player />
+    </div>
+  );
+}
+
 ReactDOM.render(
-    <Player />,
+    <App />,
         document.getElementById('root')
 
 );
