@@ -10,15 +10,20 @@ function Header() {
 const Player = () => {
   return (
     <div className="player">
-    <span className="player-name">
-    Tyrion Lannister
-    </span>
+      <span className="player-name">
+      Tyrion Lannister
+      </span>
+      <Counter />
+    </div>
+  );
+}
 
+const Counter = () => {
+  return (
     <div className="counter">
-    <button className="counter-action decrement"> - </button>
-    <span className="counter-score">35</span>
-    <button className="counter-action increment"> + </button>
-      </div>
+      <button className="counter-action decrement"> - </button>
+      <span className="counter-score">35</span>
+      <button className="counter-action increment"> + </button>
     </div>
   );
 }
