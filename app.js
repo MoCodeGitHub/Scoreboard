@@ -9,19 +9,22 @@ function Header() {
 
 const Player = () => {
   return (
-    <div className="Player">
+    <div className="player">
     <span className="player-name">
     Tyrion Lannister
-    <span>
+    </span>
 
     <div className="counter">
-    <button> - </button
-    <button> + </button>
+    <button className="counter-action decrement"> - </button>
+    <span className="counter-score">35</span>
+    <button className="counter-action increment"> + </button>
+      </div>
+    </div>
   );
 }
 
 ReactDOM.render(
-    <Header />,
+    <Player />,
         document.getElementById('root')
 
 );
