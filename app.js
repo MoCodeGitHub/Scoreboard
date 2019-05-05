@@ -1,3 +1,34 @@
+const players = [
+{
+  name: "Tyrion Lannister",
+  score: 35
+},
+{
+  name: "King In The North",
+  score: 60
+},
+{
+  name: "Dragon Queen",
+  score: 40
+},
+{
+  name: "Greyworm",
+  score: 90
+},
+{
+  name: "The Night King",
+  score: 200
+},
+{
+  name: "Cersei Lannister",
+  score: 40
+},
+{
+  name: "Arya Stark",
+  score: 300
+}
+];
+
 function Header(props) {
   return (
     <header>
@@ -30,31 +61,25 @@ const Counter = (props) => {
   );
 }
 
-const App = () => {
+const App = (props) => {
   return (
     <div className="scoreboard">
       <Header title="GAME OF THRONES"
       totalPlayers={1} />
 
       {/* Players */}
-      <Player name="Tyrion Lannister"
-      score={35} />
-      <Player name="King In The North"
-      score={35} />
-      <Player name="Dragon Queen"
-      score={35} />
-      <Player name="The Night King"
-      score={35} />
-      <Player name="Cersei Lannister"
-      score={35} />
-      <Player name="Greyworm"
-      score={35} />
+      {props.initialPlayers.map(players =>
+        <Player
+          name={players.name}
+          score={players.score}
+          />
+      )}
     </div>
   );
 }
 
 ReactDOM.render(
-    <App />,
+    <App initialPlayers={players} />,
         document.getElementById('root')
 
 );
