@@ -1,28 +1,30 @@
 function Header(props) {
   return (
     <header>
-    <h1>{ props.title}</h1>
-    <span className="stats">Player: { props.totalPlayers }</span>
+      <h1>{ props.title}</h1>
+      <span className="stats">Player: { props.totalPlayers }
+      </span>
     </header>
 );
 }
 
-const Player = () => {
+const Player = (props) => {
   return (
     <div className="player">
       <span className="player-name">
-      Tyrion Lannister
-      </span>
-      <Counter />
+        { props.name }
+
+        </span>
+      <Counter score={props.score}/>
     </div>
   );
 }
 
-const Counter = () => {
+const Counter = (props) => {
   return (
     <div className="counter">
       <button className="counter-action decrement"> - </button>
-      <span className="counter-score">35</span>
+      <span className="counter-score">{ props.score }</span>
       <button className="counter-action increment"> + </button>
     </div>
   );
@@ -31,8 +33,22 @@ const Counter = () => {
 const App = () => {
   return (
     <div className="scoreboard">
-      <Header title="Game of Thrones" totalPlayers={1} />
-      <Player />
+      <Header title="GAME OF THRONES"
+      totalPlayers={1} />
+
+      {/* Players */}
+      <Player name="Tyrion Lannister"
+      score={35} />
+      <Player name="King In The North"
+      score={35} />
+      <Player name="Dragon Queen"
+      score={35} />
+      <Player name="The Night King"
+      score={35} />
+      <Player name="Cersei Lannister"
+      score={35} />
+      <Player name="Greyworm"
+      score={35} />
     </div>
   );
 }
