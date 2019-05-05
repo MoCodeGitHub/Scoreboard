@@ -1,9 +1,10 @@
 /* ELEMENT STYLES -------------------- */
 
 body {
-  background: #e8e7e7; 
-  font-family: arial;
-  text-transform: uppercase;
+    background: -webkit-linear-gradient(70deg, #fff810  30%, rgba(0,0,0,0) 30%), -webkit-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: -o-linear-gradient(70deg, #fff810  30%, rgba(0,0,0,0) 30%), -o-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: -moz-linear-gradient(70deg, #fff810  30%, rgba(0,0,0,0) 30%), -moz-linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
+    background: linear-gradient(70deg, #fff810  30%, rgba(0,0,0,0) 30%), linear-gradient(30deg, #63e89e 60%, #ff7ee3 60%);
 }
 
 header {
@@ -12,7 +13,7 @@ header {
   text-align: center;
   display: flex;
   align-items: center;
-  background-color: #8063FA;
+  background-color: #04050f;
   border-bottom: solid 2px #D4CAFF;
 }
 
@@ -57,7 +58,7 @@ input[type=text]:focus{
 input[type=submit] {
   display: block;
   font-size: .6em;
-  margin: 15px 15px 15px 0; 
+  margin: 15px 15px 15px 0;
   padding: 10px;
   background-color: #44338D;
   border-radius: 5px;
@@ -70,7 +71,7 @@ input[type=submit] {
   cursor: pointer;
 }
 
-button, 
+button,
 input[type=submit] {
   outline: none;
   transition: background-color 0.2s ease,

@@ -1,8 +1,8 @@
-function Header() {
+function Header(props) {
   return (
     <header>
-    <h1>Scoreboard</h1>
-    <span className="stats">Player: 1</span>
+    <h1>{ props.title}</h1>
+    <span className="stats">Player: { props.totalPlayers }</span>
     </header>
 );
 }
@@ -31,7 +31,7 @@ const Counter = () => {
 const App = () => {
   return (
     <div className="scoreboard">
-      <Header />,
+      <Header title="Game of Thrones" totalPlayers={1} />
       <Player />
     </div>
   );
