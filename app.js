@@ -65,7 +65,7 @@ const App = (props) => {
   return (
     <div className="scoreboard">
       <Header title="GAME OF THRONES"
-      totalPlayers={1} />
+      totalPlayers={props.initialPlayers.length} />
 
       {/* Players */}
       {props.initialPlayers.map(players =>
