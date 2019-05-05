@@ -59,12 +59,11 @@ const Player = (props) => {
 }
 
 class Counter extends React.Component {
-  constructor(){
-    super()
-    this.state={
+
+  state = {
       score: 0
     };
-  }
+
   render (){
     return (
       <div className="counter">
