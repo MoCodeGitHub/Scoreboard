@@ -1,31 +1,38 @@
 const players = [
 {
   name: "Tyrion Lannister",
-  score: 35
+  score: 35,
+  id: 1
 },
 {
   name: "King In The North",
-  score: 60
+  score: 60,
+  id: 2
 },
 {
   name: "Dragon Queen",
-  score: 40
+  score: 40,
+  id: 3
 },
 {
   name: "Greyworm",
-  score: 90
+  score: 90,
+  id: 4
 },
 {
   name: "The Night King",
-  score: 200
+  score: 200,
+  id: 5
 },
 {
   name: "Cersei Lannister",
-  score: 40
+  score: 40,
+  id: 6
 },
 {
   name: "Arya Stark",
-  score: 300
+  score: 300,
+  id: 7
 }
 ];
 
@@ -72,6 +79,7 @@ const App = (props) => {
         <Player
           name={players.name}
           score={players.score}
+          key={players.id.toString()}
           />
       )}
     </div>
