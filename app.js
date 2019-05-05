@@ -25,11 +25,6 @@ const players = [
   id: 5
 },
 {
-  name: "Cersei Lannister",
-  score: 40,
-  id: 6
-},
-{
   name: "Arya Stark",
   score: 300,
   id: 7
@@ -65,15 +60,15 @@ class Counter extends React.Component {
     };
 
   incrementScore() {
-    this.setState({
-    score: this.state.score + 1
-    });
+    this.setState( prevState =>({
+    score: prevState.score + 1
+    }));
   }
 
   decrementScore() {
-    this.setState({
+    this.setState( prevState => ({
     score: this.state.score - 1
-    });
+    }));
   }
 
   render (){
