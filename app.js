@@ -1,36 +1,3 @@
-const players = [
-{
-  name: "Tyrion Lannister",
-  score: 35,
-  id: 1
-},
-{
-  name: "King In The North",
-  score: 60,
-  id: 2
-},
-{
-  name: "Dragon Queen",
-  score: 40,
-  id: 3
-},
-{
-  name: "Greyworm",
-  score: 90,
-  id: 4
-},
-{
-  name: "The Night King",
-  score: 200,
-  id: 5
-},
-{
-  name: "Arya Stark",
-  score: 300,
-  id: 7
-}
-];
-
 function Header(props) {
   return (
     <header>
@@ -82,26 +49,59 @@ class Counter extends React.Component {
   }
 }
 
-const App = (props) => {
-  return (
-    <div className="scoreboard">
-      <Header title="GAME OF THRONES"
-      totalPlayers={props.initialPlayers.length} />
+class App extends React.Component {
 
-      {/* Players */}
-      {props.initialPlayers.map(players =>
-        <Player
-          name={players.name}
-          score={players.score}
-          key={players.id.toString()}
-          />
-      )}
+  state = {
+    players: [
+      {
+        name: "Tyrion Lannister",
+        id: 1
+      },
+      {
+        name: "King In The North",
+        id: 2
+      },
+      {
+        name: "Dragon Queen",
+        id: 3
+      },
+      {
+        name: "Greyworm",
+        id: 4
+      },
+      {
+        name: "The Night King",
+        id: 5
+      },
+      {
+        name: "Arya Stark",
+        id: 7
+      }
+    ]
+  };
+
+  render(){
+    return (
+      <div className="scoreboard">
+        <Header title="GAME OF THRONES"
+        totalPlayers={this.state.players.length} />
+
+        {/* Players */}
+        {this.state.players.map(players =>
+          <Player
+            name={players.name}
+            score={players.score}
+            key={players.id.toString()}
+            />
+        )}
     </div>
-  );
+);
+}
 }
 
+
 ReactDOM.render(
-    <App initialPlayers={players} />,
+    <App />,
         document.getElementById('root')
 
 );
